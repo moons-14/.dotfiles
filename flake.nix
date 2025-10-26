@@ -10,9 +10,11 @@
         
         sops-nix.url         = "github:Mic92/sops-nix";
         impermanence.url     = "github:nix-community/impermanence";
+
+        vicinae.url          = "github:vicinaehq/vicinae";
     };
     
-    outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, nixos-hardware, home-manager, sops-nix, impermanence, ...}:
+    outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, nixos-hardware, home-manager, sops-nix, impermanence, vicinae, ...}:
     let
         mkSystem = { host, system, extraModules ? [ ] }:
             let 

@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
   imports =
@@ -23,6 +23,8 @@
       ../../home-manager/moons/default.nix
       ../../modules/hm/gui.nix
       ../../home-manager/hosts/x1g9.nix
+      inputs.vicinae.homeManagerModules.default
+      ../../modules/hm/vicinae.nix
     ];
   };
 }
