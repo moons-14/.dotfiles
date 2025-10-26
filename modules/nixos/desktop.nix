@@ -1,7 +1,13 @@
 { pkgs, lib, ... }:
 {
     nixpkgs.config = {
-        allowUnfreePredicate = pkg: lib.elem (lib.getName pkg) [ "google-chrome" "vscode" ];
+        allowUnfreePredicate = pkg: lib.elem (lib.getName pkg) [ 
+            "google-chrome"
+            "vscode"
+            "1password"
+            "1password-gui"
+            "1password-cli"
+        ];
     };
     
     services.xserver.enable = true;
@@ -34,6 +40,7 @@
         xwayland-satellite
         google-chrome
         vscode
+        _1password-gui _1password
     ];
 
     environment.sessionVariables = {
@@ -52,4 +59,7 @@
             ];
         };
     };
+
+    programs._1password.enable = true;
+    programs._1password-gui.enable = true;
 }
