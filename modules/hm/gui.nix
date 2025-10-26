@@ -15,4 +15,14 @@
         recursive = true;
         source = ./niri;
     };
+
+    # input method config
+    home.file.".config/fcitx5/profile" = {
+        recursive = true;
+        source = ./fcitx5/profile;
+    };
+    home.file.".config/fcitx5/config" = {
+        recursive = true;
+        source = ./fcitx5/config;
+    };
 }
