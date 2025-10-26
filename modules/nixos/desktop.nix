@@ -5,8 +5,9 @@
     };
     
     services.xserver.enable = true;
-    services.xserver.displayManager.gdm.enable = true;
-    services.xserver.desktopManager.gnome.enable = true;
+
+    # enable niri
+    programs.niri.enable = true;
     
     services.pipewire = {
         enable = true;
@@ -14,9 +15,29 @@
         pulse.enable = true;
         jack.enable = true;
     };
+
+    services.greetd ={
+        enable = true;
+        settings = {
+            default_session = {
+                    command = "tuigreet --time --remember --cmd niri";
+                    user = "greeter";
+            };
+        };
+    };
     
     environment.systemPackages = with pkgs; [
-         google-chrome
-         vscode
+        greetd.tuigreet
+        alacritty
+        fuzzel
+        swaybg
+        xwayland-satellite
+        google-chrome
+        vscode
     ];
+
+    environment.sessionVariables = {
+        ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+        QT_QPA_PLATFORM = "wayland;xcb";
+    };
 }
