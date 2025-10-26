@@ -34,10 +34,22 @@
         xwayland-satellite
         google-chrome
         vscode
+        fcitx5 fcitx5-mozc
     ];
 
     environment.sessionVariables = {
         ELECTRON_OZONE_PLATFORM_HINT = "wayland";
         QT_QPA_PLATFORM = "wayland;xcb";
+    };
+
+    i18n.inputMethod = {
+        enabled = "fcitx5";
+        fcitx5 = {
+            addons = with pkgs; [
+                fcitx5-mozc
+                fcitx5-gtk
+                fcitx5-configtool
+            ];
+        };
     };
 }

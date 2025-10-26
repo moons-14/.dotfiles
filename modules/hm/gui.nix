@@ -9,4 +9,10 @@
             "editor.formatOnSave" = true;
         };
     };
+
+    # niri config
+    home.file.".config/niri" = {
+        recursive = true;
+        source = ./niri;
+    };
 }
