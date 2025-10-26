@@ -3,6 +3,10 @@
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
     time.timeZone = "Asia/Tokyo";
     i18n.defaultLocale = "ja_JP.UTF-8";
+    services.xserver.xkb.layout = "jp";
+    services.xserver.xkb.variant = "";
+    services.xserver.xkb.options = "ctrl:nocaps";
+    console.keyMap = "jp106";
     
     # common user
     users.users.moons = {

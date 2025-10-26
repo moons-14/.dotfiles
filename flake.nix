@@ -36,6 +36,7 @@
                     ./modules/nixos/cli.nix
                     ./modules/nixos/sops.nix
                     ./modules/nixos/impermanence.nix
+                    ./modules/nixos/font.nix
                 ] ++ extraModules;
             };
     in {
