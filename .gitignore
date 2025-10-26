@@ -1,0 +1,13 @@
+/*
+
+!.gitignore
+!README.md
+!LICENSE
+
+!/flake.nix
+!/flake.lock
+
+!/hosts/
+!/modules/
+!/home-manager/
+!/shells/
