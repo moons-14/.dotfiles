@@ -12,8 +12,7 @@
     
     services.xserver.enable = true;
 
-    # enable niri
-    programs.niri.enable = true;
+    programs.hyperland.enable = true;
     
     services.pipewire = {
         enable = true;
@@ -26,7 +25,7 @@
         enable = true;
         settings = {
             default_session = {
-                    command = "tuigreet --time --remember --cmd niri";
+                    command = "tuigreet --time --remember --cmd 'uwsm start -- niri'";
                     user = "greeter";
             };
         };
@@ -41,6 +40,7 @@
         google-chrome
         vscode
         _1password-gui _1password
+        kitty
     ];
 
     environment.sessionVariables = {

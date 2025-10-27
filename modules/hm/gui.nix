@@ -10,12 +10,6 @@
         };
     };
 
-    # niri config
-    home.file.".config/niri" = {
-        recursive = true;
-        source = ./niri;
-    };
-
     # input method config
     home.file.".config/fcitx5/config" = {
         recursive = true;
