@@ -9,6 +9,6 @@
 
   home-manager.users.moons.imports = [
     ./../modules/home/vscode.nix
-    ./../modules/core/browser.nix
+    ./../modules/home/browser.nix
   ];
 }
