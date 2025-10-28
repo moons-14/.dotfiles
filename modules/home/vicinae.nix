@@ -7,7 +7,7 @@
   services.vicinae = {
       enable = true;
       autoStart = true;
-      package = [ ];
+      # package = [ ];
       settings = {
         faviconService = "twenty"; # twenty | google | none
         font.size = 11;
