@@ -1,17 +1,15 @@
 { pkgs, ... }:
-
 {
   fonts = {
-   packages = (with pkgs;
-      [
+    packages = with pkgs; [
         noto-fonts
         noto-fonts-cjk-sans
         noto-fonts-emoji
         terminus_font
         cantarell-fonts
         font-awesome
-      ]
-    );
+    ];
+
     fontDir.enable = true;
     fontconfig = {
       defaultFonts = {

@@ -1,44 +1,30 @@
 {
-    description = "Multi host Nix(OS) + Home Manager + flake";
+    description = "moons nix configurations and development shells";
 
     inputs = {
         nixpkgs.url          = "github:NixOS/nixpkgs/nixos-25.05";
         nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
         nixos-hardware.url   = "github:NixOS/nixos-hardware/master";
-        home-manager.url     = "github:nix-community/home-manager/release-25.05";
-        # home-manager.inputs.nixpkgs.follows = "nixpkgs";
-        
-        sops-nix.url         = "github:Mic92/sops-nix";
-        impermanence.url     = "github:nix-community/impermanence";
+        home-manager = {
+            url = "github:nix-community/home-manager/release-25.05";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 
         vicinae.url          = "github:vicinaehq/vicinae";
     };
-    
-    outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, nixos-hardware, home-manager, sops-nix, impermanence, vicinae, ...}:
+
+    outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, nixos-hardware, home-manager, ...}:
     let
-        mkSystem = { host, system, extraModules ? [ ] }:
-            let 
-                pkgsUnstable = import nixpkgs-unstable { inherit system; config.allowUnfree = true; };
-            in
+        mkSystem = { host, system, profile, extraModules ? [ ] }:
             nixpkgs.lib.nixosSystem {
                 inherit system;
                 specialArgs = {
-                    inherit inputs pkgsUnstable;
+                    inherit inputs;
+                    inherit host;
+                    inherit profile;
                 };
                 modules = [
-                    # host config
-                    ./hosts/${host}/default.nix
-                    
-                    # Home Manager
-                    home-manager.nixosModules.home-manager
-                    { home-manager.useGlobalPkgs = true; home-manager.useUserPackages = true; }
-                    
-                    # common NixOS module
-                    ./modules/nixos/base.nix
-                    ./modules/nixos/cli.nix
-                    ./modules/nixos/sops.nix
-                    ./modules/nixos/impermanence.nix
-                    ./modules/nixos/font.nix
+                    ./profiles/${profile}.nix
                 ] ++ extraModules;
             };
     in {
@@ -46,17 +32,8 @@
             x1g9 = mkSystem {
                 host = "x1g9";
                 system = "x86_64-linux";
-                extraModules = [
-                    # X1 Carbon Gen 9 Hardware Profile
-                    nixos-hardware.nixosModules.lenovo-thinkpad-x1-9th-gen
-                    # GUI and x1g9 only App
-                    ./modules/nixos/desktop.nix
-                ];
-            };
-            
-            dev-server = mkSystem {
-                host = "dev-server";
-                system = "x86_64-linux";
+                profile = "cli-minimal";
+                extraModules = [ ];
             };
         };
         
