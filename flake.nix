@@ -25,6 +25,7 @@
                 };
                 modules = [
                     ./profiles/${profile}.nix
+                    ./hosts/${host}
                 ] ++ extraModules;
             };
     in {

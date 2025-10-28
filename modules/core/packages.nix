@@ -16,7 +16,7 @@
     };
     zsh = {
       enable = true; 
-    }
+    };
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -31,7 +31,6 @@
     curl # Tool For Fetching Files With Links
     alacritty # A GPU Accelerated Terminal Emulator
     fuzzel # A Simple And Lightweight Application Launcher
-    msedit # A Simple Text Editor Inspired By Windows Notepad
     git # Version Control System
   ];
 }

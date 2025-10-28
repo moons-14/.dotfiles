@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   i18n.inputMethod = {
       enable = true;
@@ -26,7 +26,7 @@
                 Name = "mozc";
                 Layout = "";
             };
-          }
+          };
       };
   };
 }
