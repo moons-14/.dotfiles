@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ ... }: {
   services = {
     openssh = {
       enable = false; # Enable SSH
@@ -22,12 +22,6 @@
       pulse.enable = true;
       jack.enable = true;
     };
-
-    xdg-desktop-portal.enable = true;
-    xdg-desktop-portal.extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-wlr
-    ];
   };
 
 }
