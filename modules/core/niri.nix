@@ -2,5 +2,5 @@
 {
   programs.niri = {
     enable = true;
-  }
+  };
 }
