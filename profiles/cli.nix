@@ -1,7 +1,7 @@
 { ... }:
 {
   imports = [
-    ./gui.nix
+    ./cli-minimal.nix
   ];
 
   home-manager.users.moons.imports = [
