@@ -33,7 +33,7 @@
             x1g9 = mkSystem {
                 host = "x1g9";
                 system = "x86_64-linux";
-                profile = "cli-minimal";
+                profile = "laptop";
                 extraModules = [ ];
             };
         };

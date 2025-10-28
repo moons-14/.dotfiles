@@ -1,6 +1,10 @@
 { ... }:
 {
-  programs.hyprland = {
-    enable = true;
-  }
+  programs = {
+    hyprland = {
+      enable = true;
+      withUWSM = false;
+    };
+    hyprlock.enable = true;
+  };
 }
