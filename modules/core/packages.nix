@@ -1,15 +1,10 @@
 { pkgs, inputs, ... }:
 {
   programs = {
-    hyprland = {
-      enable = true;
-      withUWSM = false;
-    };
     dconf.enable = true;
     seahorse.enable = true;
     fuse.userAllowOther = true;
     adb.enable = true;
-    hyprlock.enable = true;
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
