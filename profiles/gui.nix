@@ -11,5 +11,6 @@
     ./../modules/home/vscode.nix
     ./../modules/home/browser.nix
     ./../modules/home/vicinae.nix
+    ./../modules/home/niri
   ];
 }
