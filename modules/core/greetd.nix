@@ -5,7 +5,7 @@
     settings = {
       default_session = {
         user = "greeter";
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd niri-session";
       };
     };
   };
