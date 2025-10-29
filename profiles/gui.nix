@@ -15,5 +15,6 @@
     ./../modules/home/vicinae.nix
     ./../modules/home/noctalia.nix
     ./../modules/home/avatar.nix
+    ./../modules/home/ghostty
   ];
 }
