@@ -1,0 +1,10 @@
+spawn-sh-at-startup "regreet; niri msg action quit --skip-confirmation"
+
+hotkey-overlay {
+  skip-at-startup
+}
+
+cursor {
+  xcursor-theme "catppuccin-mocha-red-cursors"
+  xcursor-size 24
+}

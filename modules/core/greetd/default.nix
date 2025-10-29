@@ -1,8 +1,9 @@
 { pkgs, username, ... }: {
-  environment.systemPackages = with pkgs; [
-    regreet
-    cage
-  ];
+  programs.regreet.enable = true;
+  programs.niri.enable = true;
+
+  environment.etc."regreet/config.ron".source = ./config.ron;
+  environment.etc."greetd/niri.kdl".source = ./niri.kdl;
 
   services.greetd = {
     enable = true;
@@ -10,10 +11,11 @@
     settings = {
       default_session = {
         user = "greeter";
-        command = "${pkgs.cage}/bin/cage -s -- ${pkgs.regreet}/bin/regreet --time --remember --cmd niri-session";
+        command = "${pkgs.niri}/bin/niri --config /etc/greetd/niri.kdl";
       };
     };
   };
+  programs.regreet.enable = true;
 
   environment.etc."regreet/config.ron".source = ./config.ron;
 }
