@@ -32,7 +32,12 @@ NixOS + Home Manager
   Build configurations for each environment by combining NixOS configurations and home-manager configurations.
 - shells<br/>
   Shell environment.
-- wallpapers
+
+## Declarative Defeat
+Necessary configurations not achievable with dotfiles
+### Profile: laptop
+- Fingerprint registration
+  Please register the user's fingerprints by running fprintd-enroll.
 
 ## Inspired
 
