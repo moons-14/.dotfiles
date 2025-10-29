@@ -4,8 +4,13 @@ set -euo pipefail
 
 WALLS="${HOME}/wallpapers"
 
-# Pick up wallpaper（jpg/jpeg/png/webp）
+if ! swww query >/dev/null 2>&1; then
+  swww init
+fi
+
 mapfile -t files < <(find "$WALLS" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \))
+
+
 [[ ${#files[@]} -gt 0 ]] || exit 0
 
 pick="${files[RANDOM % ${#files[@]}]}"

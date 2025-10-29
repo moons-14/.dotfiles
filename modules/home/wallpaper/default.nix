@@ -26,11 +26,11 @@ in {
 
   systemd.user.services.swww = {
     Unit = {
-      Description = "swww daemon";
+      Description = "swww init (Wayland wallpaper daemon)";
       After = [ "graphical-session.target" ];
     };
     Service = {
-      ExecStart = "${pkgs.swww}/bin/swww-daemon";
+      ExecStart = [ "${pkgs.swww}/bin/swww" "init" ];
       Restart = "on-failure";
     };
     Install = {
@@ -46,7 +46,7 @@ in {
     };
     Service = {
       Type = "oneshot";
-      ExecStart = "${pkgs.bash}/bin/bash -lc $HOME/.local/bin/set-wallpaper.sh";
+      ExecStart = [ "${pkgs.bash}/bin/bash" "${config.home.homeDirectory}/.local/bin/set-wallpaper.sh" ];
     };
     Install = {
       WantedBy = [ "default.target" ];
