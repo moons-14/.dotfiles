@@ -91,7 +91,7 @@
       };
       colorSchemes.predefinedScheme = "Monochrome";
       general = {
-        avatarImage = "/home/moons/.face";
+        avatarImage = "~/.face";
         radiusRatio = 0.2;
       };
       location = {
@@ -99,7 +99,11 @@
         name = "Tokyo";
       };
       wallpaper = {
-        enabled = false;
+        enabled = true;
+        directory = "../../wallpapers";
+        randomIntervalSec = 60;
+        transitionDuration = 1500;
+        transitionType = "random";
       };
     };
     # this may also be a string or a path to a JSON file,
