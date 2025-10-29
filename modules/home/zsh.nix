@@ -12,10 +12,10 @@
       plugins = [ "git" ];
     };
 
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    initExtra = ''
+    initContent = ''
       # ---- from gist: export / history size ----
       export HISTSIZE=999999999
       export HISTFILESIZE=999999999
