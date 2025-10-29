@@ -86,7 +86,6 @@
       wallpaper = {
         enabled = true;
         directory = "~/.wallpapers/";
-        defaultWallpaper = "3d-model.jpg";
         randomEnabled = true;
         randomIntervalSec = 60;
         transitionDuration = 1500;
