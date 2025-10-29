@@ -10,7 +10,7 @@
     settings = {
       default_session = {
         user = "greeter";
-        command = "${pkgs.cage}/bin/cage -s -mlast -- regreet --config /etc/regreet/config.ron";
+        command = "${pkgs.cage}/bin/cage -s -mlast -- /run/current-system/sw/bin/regreet --config /etc/regreet/config.ron";
       };
     };
   };
