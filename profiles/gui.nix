@@ -9,7 +9,6 @@
     ./../modules/core/stylix.nix
     inputs.stylix.nixosModules.stylix
   ];
-  disabledModules = [ "${inputs.stylix}/modules/anki/nixos.nix" ];
 
   home-manager.users.moons.imports = [
     ./../modules/home/niri
@@ -22,4 +21,5 @@
     ./../modules/home/wallpaper
     ./../modules/home/stylix.nix
   ];
+  home-manager.users.moons.disabledModules = [ "${inputs.stylix}/modules/anki/hm.nix" ];
 }
