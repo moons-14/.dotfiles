@@ -10,12 +10,16 @@
   # fprintd-verify
 
   security.pam.services = {
-    login.fprintAuth = true;
+    sudo.extraConfig = ''
+      auth sufficient pam_fprintd.so
+    '';
 
-    # sudo
-    sudo.fprintAuth = true;
+    greetd.extraConfig = ''
+      auth sufficient pam_fprintd.so
+    '';
 
-    # greetd (tuigreet / ReGreet)
-    greetd.fprintAuth = true;
+    login.extraConfig = ''
+      auth sufficient pam_fprintd.so
+    '';
   };
 }
