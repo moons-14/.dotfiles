@@ -14,4 +14,11 @@
       };
     };
   };
+
+  users.users.greeter = {
+    isSystemUser = true;
+    group = "greeter";
+    extraGroups = [ "input" "video" ];
+  };
+  users.groups.greeter = {};
 }
