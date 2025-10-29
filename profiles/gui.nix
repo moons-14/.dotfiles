@@ -6,6 +6,7 @@
     ./../modules/core/hyprland.nix
     ./../modules/core/greetd.nix
     ./../modules/core/noctalia.nix
+    ./../modules/core/stylix.nix
   ];
 
   home-manager.users.moons.imports = [
@@ -17,5 +18,6 @@
     ./../modules/home/avatar.nix
     ./../modules/home/ghostty
     ./../modules/home/wallpaper
+    ./../modules/home/stylix.nix
   ];
 }

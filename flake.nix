@@ -22,6 +22,10 @@
             inputs.nixpkgs.follows = "nixpkgs";
             inputs.quickshell.follows = "quickshell";
         };
+        stylix = {
+            url = "github:nix-community/stylix";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
     outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, nixos-hardware, home-manager, ...}:

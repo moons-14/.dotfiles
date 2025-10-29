@@ -7,5 +7,6 @@ mapfile -t files < <(find "$WALLPAPERS_DIR" -type f 2>/dev/null)
 
 file="$(printf '%s\n' "${files[@]}" | shuf -n 1)"
 
+echo file: "$file"
 
 exec swww img "$file" --transition-type grow --transition-step 90
