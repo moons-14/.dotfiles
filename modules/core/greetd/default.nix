@@ -15,7 +15,6 @@
       };
     };
   };
-  programs.regreet.enable = true;
 
   environment.etc."regreet/config.ron".source = ./config.ron;
 }
