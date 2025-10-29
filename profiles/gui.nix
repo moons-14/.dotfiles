@@ -4,7 +4,7 @@
     ./cli.nix
     ./../modules/core/niri.nix
     ./../modules/core/hyprland.nix
-    ./../modules/core/greetd.nix
+    ./../modules/core/greetd
     ./../modules/core/noctalia.nix
   ];
 

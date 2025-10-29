@@ -1,0 +1,6 @@
+Config(
+  default_session: Some("niri-session"),
+  remember_username: true,
+  twenty_four_hour_clock: true,
+  # font_family: Some("BlexMono Nerd Font Mono"),
+)
