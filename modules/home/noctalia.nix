@@ -99,11 +99,7 @@
         name = "Tokyo";
       };
       wallpaper = {
-        enabled = true;
-        directory = "~/wallpapers";
-        randomIntervalSec = 60;
-        transitionDuration = 1500;
-        transitionType = "random";
+        enabled = false;
       };
     };
     # this may also be a string or a path to a JSON file,
