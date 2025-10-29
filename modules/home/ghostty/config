@@ -1,8 +1,7 @@
 theme = tokyonight
 background-blur-radius = 20
 background-opacity = 0.9
-# font-family = BlexMono Nerd Font Mono
-font-family = Noto Serif CJK JP
+font-family = BlexMono Nerd Font Mono
 mouse-hide-while-typing = true
 window-decoration = true
 
