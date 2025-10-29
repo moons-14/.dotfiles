@@ -15,11 +15,11 @@
             };
             "Groups/0" = {
                 Name = "Default";
-                "Default Layout" = "jp";
+                "Default Layout" = "keyboard-jp";
                 DefaultIM = "mozc";
             };
             "Groups/0/Items/0" = {
-                Name = "ja";
+                Name = "keyboard-jp";
                 Layout = "";
             };
             "Groups/0/Items/1" = {
