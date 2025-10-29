@@ -15,6 +15,4 @@
       };
     };
   };
-
-  environment.etc."regreet/config.ron".source = ./config.ron;
 }
