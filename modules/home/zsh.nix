@@ -12,7 +12,7 @@
       plugins = [ "git" ];
     };
 
-    autosuggestions.enable = true;
+    enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
 
     initExtra = ''
