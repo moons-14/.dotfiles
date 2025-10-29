@@ -9,21 +9,13 @@
   # Test fingerprint authentication
   # fprintd-verify
 
- security.pam.services = {
-    sudo.text = lib.mkBefore ''
-      auth sufficient pam_fprintd.so
-    '';
+  security.pam.services = {
+    login.fprintAuth = true;
 
-    login.text = lib.mkBefore ''
-      auth sufficient pam_fprintd.so
-    '';
+    # sudo
+    sudo.fprintAuth = true;
 
-    greetd.text = lib.mkBefore ''
-      auth sufficient pam_fprintd.so
-    '';
-
-    polkit-1.text = lib.mkBefore ''
-      auth sufficient pam_fprintd.so
-    '';
+    # greetd (tuigreet / ReGreet)
+    greetd.fprintAuth = true;
   };
 }
