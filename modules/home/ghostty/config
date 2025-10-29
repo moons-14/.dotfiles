@@ -1,11 +1,24 @@
-theme = Builtin Solarized Dark
-background-opacity = 0.85
-palette = 8=#5d728c
+theme = 0x96f
+background-blur-radius = 20
+background-opacity = 0.9
+font-family = BlexMono Nerd Font Mono
+font-size = 16
+mouse-hide-while-typing = true
+window-decoration = true
+
+
 # keybind
+
+# Copy/Paste
+keybind = ctrl+c=copy_to_clipboard
+keybind = ctrl+v=paste_from_clipboard
+
 # create new tab
-keybind = ctrlt+t=new_tab
+keybind = ctrl+t=new_tab
+
 # move tabs
 keybind = ctrl+alt+left_bracket=previous_tab
 keybind = ctrl+alt+right_bracket=next_tab
+
 # close tab
 keybind = ctrl+alt+q=close_window

@@ -8,6 +8,7 @@
         terminus_font
         cantarell-fonts
         font-awesome
+        nerd-fonts.blex-mono
     ];
 
     fontDir.enable = true;
