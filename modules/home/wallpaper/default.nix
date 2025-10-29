@@ -46,7 +46,7 @@ in {
     };
     Service = {
       Type = "oneshot";
-      ExecStart = [ "${pkgs.bash}/bin/bash" "${config.home.homeDirectory}/.local/bin/set-wallpaper.sh" ];
+      ExecStart = [ "${pkgs.bash}/bin/bash" "$HOME/.local/bin/set-wallpaper.sh" ];
     };
     Install = {
       WantedBy = [ "default.target" ];
