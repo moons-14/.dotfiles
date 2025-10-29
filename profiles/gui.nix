@@ -16,5 +16,6 @@
     ./../modules/home/noctalia.nix
     ./../modules/home/avatar.nix
     ./../modules/home/ghostty
+    ./../modules/home/wallpaper.nix
   ];
 }

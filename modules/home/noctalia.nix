@@ -100,7 +100,7 @@
       };
       wallpaper = {
         enabled = true;
-        directory = "../../wallpapers";
+        directory = "~/wallpapers";
         randomIntervalSec = 60;
         transitionDuration = 1500;
         transitionType = "random";
