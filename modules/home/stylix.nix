@@ -1,5 +1,6 @@
-{ ... }: 
+{ pkgs, ... }: 
 {
+
   stylix.targets = {
     ghostty.enable = false;
     noctalia.enable = false;

@@ -1,14 +1,11 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   stylix = {
     enable = true;
 
     targets = {
-      gnome.enable = lib.mkForce false;
-      gnomeShell.enable = lib.mkForce false;
-      gdm.enable = lib.mkForce false;
+      gnome.enable = false;
       gtk.enable = true;
-      qt.enable = true;
     };
 
     polarity = "dark";
