@@ -17,8 +17,5 @@
 
     # greetd (tuigreet / ReGreet)
     greetd.fprintAuth = true;
-
-    # lock screen
-    swaylock.fprintAuth = true;
   };
 }
