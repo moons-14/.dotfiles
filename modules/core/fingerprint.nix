@@ -14,10 +14,6 @@
       auth sufficient pam_fprintd.so
     '';
 
-    greetd.extraConfig = ''
-      auth sufficient pam_fprintd.so
-    '';
-
     login.extraConfig = ''
       auth sufficient pam_fprintd.so
     '';
