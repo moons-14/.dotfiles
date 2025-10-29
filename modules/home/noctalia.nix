@@ -87,7 +87,7 @@
         enabled = true;
         directory = "~/.wallpapers/";
         defaultWallpaper = "~/.wallpapers/3d-model.jpg";
-        randomEnabled = false;
+        randomEnabled = true;
         randomIntervalSec = 60;
         transitionDuration = 1500;
       };
