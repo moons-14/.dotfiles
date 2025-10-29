@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, ... }:
 {
   imports = [
     ./cli.nix
@@ -7,7 +7,9 @@
     ./../modules/core/greetd.nix
     ./../modules/core/noctalia.nix
     ./../modules/core/stylix.nix
+    inputs.stylix.nixosModules.stylix
   ];
+  disabledModules = [ "${inputs.stylix}/modules/anki/nixos.nix" ];
 
   home-manager.users.moons.imports = [
     ./../modules/home/niri
