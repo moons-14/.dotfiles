@@ -31,8 +31,8 @@
         # be deep merged with these attributes.
         bar = {
           density = "compact";
-          position = "right";
-          showCapsule = false;
+          position = "top";
+          showCapsule = true;
           widgets = {
             left = [
               {
@@ -45,6 +45,12 @@
               {
                 id = "Bluetooth";
               }
+              {
+                id = "SystemMonitor";
+              }
+              {
+                id = "ActiveWindow";
+              }
             ];
             center = [
               {
@@ -55,9 +61,21 @@
             ];
             right = [
               {
-                alwaysShowPercentage = false;
+                id = "MediaMini";
+              }
+              {
+                id = "NotificationHistory";
+              }
+              {
+                alwaysShowPercentage = true;
                 id = "Battery";
                 warningThreshold = 30;
+              }
+              {
+                id = "Volume";
+              }
+              {
+                id = "Brightness";
               }
               {
                 formatHorizontal = "HH:mm";
@@ -65,6 +83,9 @@
                 id = "Clock";
                 useMonospacedFont = true;
                 usePrimaryColor = true;
+              }
+              {
+                id = "ControlCenter";
               }
             ];
           };
@@ -76,7 +97,10 @@
         };
         location = {
           monthBeforeDay = true;
-          name = "Marseille, France";
+          name = "Tokyo";
+        };
+        wallpaper = {
+          enabled = false;
         };
       };
       # this may also be a string or a path to a JSON file,
