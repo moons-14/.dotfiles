@@ -66,7 +66,7 @@
               id = "NotificationHistory";
             }
             {
-              alwaysShowPercentage = true;
+              displayMode = "alwaysShow";
               id = "Battery";
               warningThreshold = 30;
             }
