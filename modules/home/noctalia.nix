@@ -8,36 +8,17 @@
   # configure options
   programs.noctalia-shell = {
     enable = true;
-    colors = {
-      # you must set ALL of these
-      mError = "#dddddd";
-      mOnError = "#111111";
-      mOnPrimary = "#111111";
-      mOnSecondary = "#111111";
-      mOnSurface = "#828282";
-      mOnSurfaceVariant = "#5d5d5d";
-      mOnTertiary = "#111111";
-      mOutline = "#3c3c3c";
-      mPrimary = "#aaaaaa";
-      mSecondary = "#a7a7a7";
-      mShadow = "#000000";
-      mSurface = "#111111";
-      mSurfaceVariant = "#191919";
-      mTertiary = "#cccccc";
-    };
     settings = {
       # configure noctalia here; defaults will
       # be deep merged with these attributes.
       bar = {
-        density = "compact";
+        density = "default";
         position = "top";
         showCapsule = true;
+        backgroundOpacity = 0.8;
+        floating = true;
         widgets = {
           left = [
-            {
-              id = "SidePanelToggle";
-              useDistroLogo = true;
-            }
             {
               id = "WiFi";
             }
@@ -71,9 +52,11 @@
               warningThreshold = 30;
             }
             {
+              displayMode = "alwaysShow";
               id = "Volume";
             }
             {
+              displayMode = "alwaysShow";
               id = "Brightness";
             }
             {
@@ -85,22 +68,73 @@
             }
             {
               id = "ControlCenter";
+              useDistroLogo = true;
             }
           ];
         };
       };
-      colorSchemes.predefinedScheme = "Monochrome";
+      colorSchemes.predefinedScheme = "dracula";
       general = {
         avatarImage = "~/.face";
         radiusRatio = 0.2;
       };
       location = {
         monthBeforeDay = true;
+        weatherEnabled = false;
         name = "Tokyo";
       };
       wallpaper = {
-        enabled = false;
+        enabled = true;
+        directory = "~/.wallpapers/";
+        randomEnabled = false;
+        randomIntervalSec = 60;
+        transitionDuration = 1500;
       };
+      controlCenter = {
+          position = "close_to_bar_button";
+          shortcuts = {
+            left = [
+              {
+                id = "WiFi";
+              }
+              {
+                id = "Bluetooth";
+              }
+              {
+                id = "ScreenRecorder";
+              }
+              {
+                id = "WallpaperSelector";
+              }
+            ];
+            right = [
+              {
+                id = "Notifications";
+              }
+              {
+                id = "NightLight";
+              }
+            ];
+          };
+          cards = [
+            {
+              enabled = true;
+              id = "profile-card";
+            }
+            {
+              enabled = true;
+              id = "shortcuts-card";
+            }
+            {
+              enabled = true;
+              id = "audio-card";
+            }
+            {
+              enabled = true;
+              id = "media-sysmon-card";
+            }
+          ];
+        };
     };
     # this may also be a string or a path to a JSON file,
     # but in this case must include *all* settings.
