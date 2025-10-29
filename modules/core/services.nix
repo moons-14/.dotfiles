@@ -15,6 +15,9 @@
 
     gnome.gnome-keyring.enable = true;
 
+    upower.enable = true;
+    tlp.enable = true;
+
     pipewire = {
       enable = true;
       alsa.enable = true;
