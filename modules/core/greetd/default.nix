@@ -1,6 +1,6 @@
-{ pkgs, username, ... }: {
+{ pkgs, ... }: {
   programs.regreet.enable = true;
-  services.cage.enable = true;
+  environment.systemPackages = with pkgs; [ cage ];
 
   environment.etc."regreet/config.ron".source = ./config.ron;
 
@@ -10,15 +10,8 @@
     settings = {
       default_session = {
         user = "greeter";
-        command = "cage -s -mlast -- regreet";
+        command = "${pkgs.cage}/bin/cage -s -mlast -- regreet --config /etc/regreet/config.ron";
       };
     };
   };
-
-  users.users.greeter = {
-    isSystemUser = true;
-    group = "greeter";
-    extraGroups = [ "input" "video" ];
-  };
-  users.groups.greeter = {};
 }
