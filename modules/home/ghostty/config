@@ -1,0 +1,11 @@
+theme = Builtin Solarized Dark
+background-opacity = 0.85
+palette = 8=#5d728c
+# keybind
+# create new tab
+keybind = ctrlt+t=new_tab
+# move tabs
+keybind = ctrl+alt+left_bracket=previous_tab
+keybind = ctrl+alt+right_bracket=next_tab
+# close tab
+keybind = ctrl+alt+q=close_window

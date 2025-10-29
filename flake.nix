@@ -11,6 +11,7 @@
         };
 
         vicinae.url          = "github:vicinaehq/vicinae";
+        ghostty.url          = "github:ghostty-org/ghostty";
 
         quickshell = {
             url = "github:outfoxxed/quickshell";
