@@ -91,7 +91,7 @@
       };
       colorSchemes.predefinedScheme = "Monochrome";
       general = {
-        avatarImage = "/home/drfoobar/.face";
+        avatarImage = "/home/moons/.face";
         radiusRatio = 0.2;
       };
       location = {
