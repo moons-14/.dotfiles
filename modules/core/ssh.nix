@@ -2,6 +2,8 @@
 {
   imports = [ inputs.auth-keys-hub.nixosModules.auth-keys-hub ];
 
+  programs.ssh.startAgent = true;
+  
   services.openssh = {
     enable = true;
     openFirewall = true;

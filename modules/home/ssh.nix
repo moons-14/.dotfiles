@@ -1,6 +1,5 @@
 { config, lib, pkgs, ... }:
 {
-  programs.ssh.startAgent = true;
 
   home.packages = [ pkgs.openssh ];
 
