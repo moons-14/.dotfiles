@@ -53,6 +53,12 @@
                 profile = "laptop";
                 extraModules = [ ];
             };
+            x1g13-wsl = mkSystem {
+                host = "x1g13-wsl";
+                system = "x86_64-linux";
+                profile = "cli";
+                extraModules = [ ];
+            };
         };
         
         devShells = {
