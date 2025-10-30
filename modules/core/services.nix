@@ -1,14 +1,5 @@
 { ... }: {
   services = {
-    openssh = {
-      enable = false; # Enable SSH
-      settings = {
-        PermitRootLogin = "no"; # Prevent root from SSH login
-        PasswordAuthentication = false;
-        KbdInteractiveAuthentication = true;
-      };
-      ports = [ 22 ];
-    };
 
     blueman.enable = true; # Bluetooth Support
     tumbler.enable = true; # Image/video preview
