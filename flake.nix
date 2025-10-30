@@ -12,6 +12,7 @@
 
         vicinae.url          = "github:vicinaehq/vicinae";
         ghostty.url          = "github:ghostty-org/ghostty";
+        inputs.auth-keys-hub.url = "github:input-output-hk/auth-keys-hub";
 
         quickshell = {
             url = "github:outfoxxed/quickshell";
@@ -39,6 +40,7 @@
                     inherit profile;
                 };
                 modules = [
+                    ./modules/core
                     ./profiles/${profile}.nix
                     ./hosts/${host}
                 ] ++ extraModules;

@@ -10,6 +10,7 @@
     ./network.nix
     ./packages.nix
     ./services.nix
+    ./ssh.nix
     ./system.nix
     ./user.nix
     ./xserver.nix
