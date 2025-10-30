@@ -17,10 +17,11 @@
   '';
 
   services.ssh-agent.enable = true;
+  programs.gpg.enable = true;
 
-  programs.gpg-agent = {
+
+  services.gpg-agent = {
     enable = true;
-    enableSSHSupport = false;   # ← ここが重要（衝突回避）
-    # pinentryFlavor = "gnome3" など必要に応じて
+    enableSSHSupport = false;
   };
 }
