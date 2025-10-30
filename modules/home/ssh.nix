@@ -22,6 +22,5 @@
 
   services.gpg-agent = {
     enable = true;
-    enableSSHSupport = false;
   };
 }
