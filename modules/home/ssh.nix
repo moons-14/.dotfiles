@@ -5,7 +5,6 @@
 
   programs.ssh = {
     enable = true;
-    startAgent = true;
     extraConfig = ''
       Host *
         AddKeysToAgent yes
