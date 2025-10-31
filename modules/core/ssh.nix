@@ -1,24 +1,22 @@
 { inputs, pkgs, ... }:
 {
-  imports = [ inputs.auth-keys-hub.nixosModules.auth-keys-hub ];
-
-  programs.ssh.startAgent = true;
+  imports = [
+    inputs.auth-keys-hub.nixosModules.auth-keys-hub
+  ];
 
   services.openssh = {
     enable = true;
     openFirewall = true;
     settings = {
-      PermitRootLogin = "no"; # Prevent root from SSH login
+      PermitRootLogin = "no";
       PasswordAuthentication = false;
-      KbdInteractiveAuthentication = true;
+      KbdInteractiveAuthentication = false;
+      PubkeyAuthentication = "yes";
     };
-    ports = [ 22 ];
   };
 
   programs.auth-keys-hub = {
     enable = true;
-    github = {
-      users = [ "moons-14:moons" ];
-    };
+    github.users = [ "moons-14:${username}" ];
   };
 }
