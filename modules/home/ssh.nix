@@ -3,8 +3,6 @@
 
   home.packages = [ pkgs.openssh ];
 
-  programs.ssh.startAgent = true;
-
   home.activation.generateSshKey = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     key="$HOME/.ssh/id_ed25519"
     if [ ! -f "$key" ]; then
