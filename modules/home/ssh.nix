@@ -25,14 +25,12 @@
     enable = true;
 
     signing = {
-      gpgFormat = "ssh";
       key = "~/.ssh/id_ed25519.pub";
       signByDefault = true;
     };
 
     extraConfig = {
       gpg.format = "ssh";
-      commit.gpgsign = true;
       tag.gpgSign = true;
     };
   };
