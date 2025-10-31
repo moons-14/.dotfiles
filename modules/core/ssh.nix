@@ -1,8 +1,5 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
-  imports = [
-    inputs.auth-keys-hub.nixosModules.auth-keys-hub
-  ];
 
   services.openssh = {
     enable = true;
@@ -15,8 +12,4 @@
     };
   };
 
-  programs.auth-keys-hub = {
-    enable = true;
-    github.users = [ "moons-14:moons" ];
-  };
 }

@@ -8,7 +8,7 @@
     if [ ! -f "$key" ]; then
       umask 077
       mkdir -p "$HOME/.ssh"
-      ssh-keygen -t ed25519 -N "" -f "$key" -C "${config.home.username}@$(hostnamectl --static 2>/dev/null || echo host)"
+      ssh-keygen -t ed25519 -N "" -f "$key" -C "moons@$(hostnamectl --static 2>/dev/null || echo host)"
       echo "Generated SSH key at $key"
     fi
   '';
