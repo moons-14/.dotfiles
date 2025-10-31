@@ -17,6 +17,6 @@
 
   programs.auth-keys-hub = {
     enable = true;
-    github.users = [ "moons-14:${username}" ];
+    github.users = [ "moons-14:moons" ];
   };
 }
