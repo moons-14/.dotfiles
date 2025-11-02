@@ -29,6 +29,6 @@
     fuzzel # A Simple And Lightweight Application Launcher
     git # Version Control System
     tailscale # Zero-Config VPN
-    inputs.nixpkgs-unstable.msedit # Microsoft Editor
+    inputs.nixpkgs-unstable.packages.msedit # Microsoft Editor
   ];
 }
