@@ -1,4 +1,7 @@
 { inputs, pkgs, ... }:
+let 
+  defaultKeyBind = import ./defaultKeyBind.nix;
+in 
 {
   imports = [ inputs.niri-flake.homeModules.niri ];
   programs.niri.package = pkgs.niri;
@@ -30,7 +33,7 @@
       };
     };
 
-    binds = {
+    binds = defaultKeyBind // {
       "Mod+T" = {
         action.spawn = "ghostty";
         hotkey-overlay.title = "Open a Terminal: ghostty";
