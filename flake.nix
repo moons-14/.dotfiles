@@ -13,7 +13,7 @@
 
         vicinae.url          = "github:vicinaehq/vicinae";
         ghostty.url          = "github:ghostty-org/ghostty";
-        niri.url             = "github:sodiboo/niri-flake";
+        niri-flake.url             = "github:sodiboo/niri-flake";
 
         quickshell = {
             url = "github:outfoxxed/quickshell";
