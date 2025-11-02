@@ -7,6 +7,7 @@
     ./../modules/core/greetd.nix
     ./../modules/core/noctalia.nix
     ./../modules/core/1password.nix
+    ./../modules/core/sns.nix
   ];
 
   home-manager.users.moons.imports = [
@@ -19,5 +20,6 @@
     ./../modules/home/ghostty
     ./../modules/home/wallpaper.nix
     ./../modules/home/lock.nix
+    ./../modules/home/sns.nix
   ];
 }
