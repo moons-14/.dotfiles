@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, host, ... }:
 {
 
   home.packages = [ pkgs.openssh ];
@@ -18,7 +18,7 @@
       umask 077
       mkdir -p "$HOME/.ssh"
       ${pkgs.openssh}/bin/ssh-keygen -t ed25519 -N "" -f "$key" \
-        -C "moons@$(hostnamectl --static 2>/dev/null || echo host)"
+        -C "moons@$(${host} || echo host)"
       echo "Generated SSH key at $key"
     fi
   '';

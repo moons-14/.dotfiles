@@ -16,6 +16,15 @@
       pulse.enable = true;
       jack.enable = true;
     };
+
+    logind = {
+      lidSwitch = "lock";          # Lock when lid is closed
+      lidSwitchDocked = "ignore";  # Ignore when docked
+      extraConfig = ''
+        HandleLidSwitchExternalPower=lock
+        LidSwitchIgnoreInhibited=no
+      '';
+    }
   };
 
 }
