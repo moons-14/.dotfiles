@@ -46,3 +46,4 @@ Necessary configurations not achievable with dotfiles
 
 - [Zaney/zaneyos](https://gitlab.com/Zaney/zaneyos)
 - [fa0311/.zshrc](https://gist.github.com/fa0311/d37d53ff39c73c54c883379e8e3732df)
+- [AsianLovesLinux/Niri](https://github.com/AsianLovesLinux/Niri)

@@ -13,6 +13,7 @@
 
         vicinae.url          = "github:vicinaehq/vicinae";
         ghostty.url          = "github:ghostty-org/ghostty";
+        niri.url             = "github:sodiboo/niri-flake";
 
         quickshell = {
             url = "github:outfoxxed/quickshell";
@@ -40,6 +41,7 @@
                     inherit profile;
                 };
                 modules = [
+                    ./overlays
                     ./modules/core
                     ./profiles/${profile}.nix
                     ./hosts/${host}
