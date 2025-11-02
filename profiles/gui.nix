@@ -10,6 +10,7 @@
   ];
 
   home-manager.users.moons.imports = [
+    ./../modules/core/niri.nix
     ./../modules/home/vscode.nix
     ./../modules/home/browser.nix
     ./../modules/home/vicinae.nix

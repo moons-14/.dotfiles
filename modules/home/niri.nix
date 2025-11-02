@@ -9,6 +9,10 @@
       scroll-method = "two-finger";
       click-method = "clickfinger";
     };
+
+    spawn-at-startup = [
+      { command = [ "noctalia-shell" ]; }
+    ];
     
     # Doracura color
     layout = {
