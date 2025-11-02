@@ -36,28 +36,28 @@
           hotkey-overlay.title = "Run an Application: vicinae";
         };
         "Super+Alt+L" = {
-          action.spawn = "noctalia-shell" "ipc" "call" "lockScreen" "lock";
+          action.spawn = [ "noctalia-shell" "ipc" "call" "lockScreen" "lock" ];
           hotkey-overlay.title = "Lock the Screen: noctalia";
         };
         
         "XF86AudioRaiseVolume" = {
-          action.spawn = "noctalia-shell" "ipc" "call" "volume" "increase";
+          action.spawn = [ "noctalia-shell" "ipc" "call" "volume" "increase" ];
         };
         "XF86AudioLowerVolume" = {
-          action.spawn = "noctalia-shell" "ipc" "call" "volume" "decrease";
+          action.spawn = [ "noctalia-shell" "ipc" "call" "volume" "decrease" ];
         };
         "XF86AudioMute" = {
-          action.spawn = "noctalia-shell" "ipc" "call" "volume" "muteOutput";
+          action.spawn = [ "noctalia-shell" "ipc" "call" "volume" "muteOutput" ];
         };
         "XF86AudioMicMute" = {
-          action.spawn = "noctalia-shell" "ipc" "call" "volume" "muteInput";
+          action.spawn = [ "noctalia-shell" "ipc" "call" "volume" "muteInput" ];
         };
         
         "XF86MonBrightnessUp" = {
-          action.spawn = "noctalia-shell" "ipc" "call" "brightness" "increase";
+          action.spawn = [ "noctalia-shell" "ipc" "call" "brightness" "increase" ];
         };
         "XF86MonBrightnessDown" = {
-          action.spawn = "noctalia-shell" "ipc" "call" "brightness" "decrease";
+          action.spawn = [ "noctalia-shell" "ipc" "call" "brightness" "decrease" ];
         };
       };
     };
