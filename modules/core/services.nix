@@ -24,7 +24,7 @@
         HandleLidSwitchExternalPower=lock
         LidSwitchIgnoreInhibited=no
       '';
-    }
+    };
   };
 
 }
