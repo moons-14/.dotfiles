@@ -1,7 +1,7 @@
 { pkgs, lib, ... }:
 
 let
-  noctaliaLock = "qs -c noctalia-shell ipc call sessionMenu lockAndSuspend";
+  noctaliaLock = "noctalia-shell ipc call sessionMenu lockAndSuspend";
 
   dpmsOff = "${pkgs.niri}/bin/niri msg action power-off-monitors";
   dpmsOn  = "${pkgs.niri}/bin/niri msg action power-on-monitors";
