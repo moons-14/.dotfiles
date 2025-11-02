@@ -4,8 +4,8 @@ let
   noctaliaPkg = inputs.noctalia.packages.${pkgs.system}.default;
   noctaliaExe = lib.getExe noctaliaPkg;
 
-  lockCmd          = "${noctaliaExe} ipc call sessionMenu lock";
-  lockAndSuspendCmd= "${noctaliaExe} ipc call sessionMenu lockAndSuspend";
+  lockCmd           = "${pkgs.bash}/bin/bash -lc '${noctaliaExe} ipc call sessionMenu lock'";
+  lockAndSuspendCmd = "${pkgs.bash}/bin/bash -lc '${noctaliaExe} ipc call sessionMenu lockAndSuspend'";
 
   dpmsOff = "${pkgs.niri}/bin/niri msg action power-off-monitors";
   dpmsOn  = "${pkgs.niri}/bin/niri msg action power-on-monitors";
