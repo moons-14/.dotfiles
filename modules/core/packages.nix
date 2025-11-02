@@ -1,4 +1,7 @@
 { pkgs, inputs, ... }:
+let
+  unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
+in
 {
   programs = {
     xwayland.enable = true;
@@ -29,6 +32,6 @@
     fuzzel # A Simple And Lightweight Application Launcher
     git # Version Control System
     tailscale # Zero-Config VPN
-    inputs.nixpkgs-unstable.packages.msedit # Microsoft Editor
+    unstable.msedit # Microsoft Editor
   ];
 }
