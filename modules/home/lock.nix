@@ -1,7 +1,7 @@
 { pkgs, lib, inputs, ... }:
 
 let
-  noctaliaPkg = inputs.noctalia.packages.${pkgs.system}.noctalia-shell;
+  noctaliaPkg = inputs.noctalia.packages.${pkgs.system}.default;
   noctaliaExe = lib.getExe noctaliaPkg;
 
   lockCmd          = "${noctaliaExe} ipc call sessionMenu lock";
