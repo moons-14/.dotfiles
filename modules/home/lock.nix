@@ -7,7 +7,6 @@ let
   lockCmd          = "${noctaliaExe} ipc call sessionMenu lock";
   lockAndSuspendCmd= "${noctaliaExe} ipc call sessionMenu lockAndSuspend";
 
-
   dpmsOff = "${pkgs.niri}/bin/niri msg action power-off-monitors";
   dpmsOn  = "${pkgs.niri}/bin/niri msg action power-on-monitors";
 in
@@ -17,14 +16,12 @@ in
     systemdTarget = "graphical-session.target";
 
     timeouts = [
-      { timeout = 300; command = noctaliaLock; }
-
-      { timeout = 306; command = dpmsOff; resumeCommand = dpmsOn; }
+      { timeout = 300; command = lockAndSuspendCmd; }
     ];
 
     events = [
-      { event = "lock";         command = noctaliaLock; }
-      { event = "before-sleep"; command = noctaliaLock; }
+      { event = "lock";         command = lockCmd; }
+      { event = "before-sleep"; command = lockCmd; }
       { event = "after-resume"; command = dpmsOn; }
     ];
   };

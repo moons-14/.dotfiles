@@ -18,7 +18,7 @@
     };
 
     logind = {
-      lidSwitch = "lock";          # Lock when lid is closed
+      lidSwitch = "suspend";          # Lock when lid is closed
       lidSwitchDocked = "ignore";  # Ignore when docked
       extraConfig = ''
         HandleLidSwitchExternalPower=lock
