@@ -1,7 +1,12 @@
 { pkgs, lib, ... }:
 
 let
-  noctaliaLock = "noctalia-shell ipc call sessionMenu lockAndSuspend";
+  noctaliaPkg = inputs.noctalia.packages.${pkgs.system}.noctalia-shell;
+  noctaliaExe = lib.getExe noctaliaPkg;
+
+  lockCmd          = "${noctaliaExe} ipc call sessionMenu lock";
+  lockAndSuspendCmd= "${noctaliaExe} ipc call sessionMenu lockAndSuspend";
+
 
   dpmsOff = "${pkgs.niri}/bin/niri msg action power-off-monitors";
   dpmsOn  = "${pkgs.niri}/bin/niri msg action power-on-monitors";
@@ -22,5 +27,11 @@ in
       { event = "before-sleep"; command = noctaliaLock; }
       { event = "after-resume"; command = dpmsOn; }
     ];
+  };
+
+  systemd.user.services.swayidle = {
+    Service = {
+      PassEnvironment = [ "WAYLAND_DISPLAY" "XDG_RUNTIME_DIR" "DBUS_SESSION_BUS_ADDRESS" ];
+    };
   };
 }
