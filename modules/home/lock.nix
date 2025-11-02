@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, inputs, ... }:
 
 let
   noctaliaPkg = inputs.noctalia.packages.${pkgs.system}.noctalia-shell;
