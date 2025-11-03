@@ -4,7 +4,7 @@
     nautilus
     gvfs sushi
     gradience
-    adw-gtk3
   ];
+
 
 }
