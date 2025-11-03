@@ -90,6 +90,16 @@
         randomIntervalSec = 60;
         transitionDuration = 1500;
       };
+      dock = {
+        enabled = true;
+        displayMode = "auto_hide";
+        backgroundOpacity = 0.8;
+        floatingRatio = 1;
+        size = 1;
+        onlySameOutput = true;
+        pinnedApps = [ "google-chrome.desktop" "code.desktop" ];
+        colorizeIcons = false;
+      };
       controlCenter = {
           position = "close_to_bar_button";
           shortcuts = {
