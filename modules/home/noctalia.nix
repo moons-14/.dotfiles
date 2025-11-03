@@ -98,7 +98,7 @@
         size = 1;
         onlySameOutput = true;
         monitors = [ "eDP-1" ];
-        pinnedApps = [ "com.mitchellh.ghostty.desktop" "org.gnome.Nautilus.desktop" "google-chrome" "code" ];
+        pinnedApps = [ "com.mitchellh.ghostty" "org.gnome.Nautilus" "google-chrome" "code" ];
         colorizeIcons = false;
       };
       controlCenter = {
