@@ -26,7 +26,7 @@ let
 
     nix = {
       extensions = with vsc; [
-        bbenoist.Nix
+        bbenoist.nix
         jnoortheen.nix-ide
       ];
       userSettings = {
