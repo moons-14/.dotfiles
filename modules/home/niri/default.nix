@@ -43,6 +43,10 @@ in
         action.spawn = [ "vicinae" "toggle"];
         hotkey-overlay.title = "Run an Application: vicinae";
       };
+      "Mod+E" = {
+        action.spawn = [ "nautilus" "--new-window" ];
+        hotkey-overlay.title = "Open File Manager: nautilus";
+      };
       "Super+Alt+L" = {
         action.spawn = [ "noctalia-shell" "ipc" "call" "lockScreen" "lock" ];
         hotkey-overlay.title = "Lock the Screen: noctalia";
