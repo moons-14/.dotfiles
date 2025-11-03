@@ -22,7 +22,7 @@ in
 
   environment.systemPackages = with pkgs; [
     greetd.tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
-    htop # Simple Terminal Based System Monitor
+    htop btop # Simple Terminal Based System Monitor
     unrar # Tool For Handling .rar Files
     unzip # Tool For Handling .zip Files
     uwsm # Universal Wayland Session Manager (optional must be enabled)

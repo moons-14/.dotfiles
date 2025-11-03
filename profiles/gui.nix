@@ -20,6 +20,6 @@
     ./../modules/home/ghostty
     ./../modules/home/wallpaper.nix
     ./../modules/home/lock.nix
-    ./../modules/home/sns.nix
+    ./../modules/home/discord.nix
   ];
 }
