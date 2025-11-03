@@ -97,7 +97,8 @@
         floatingRatio = 1;
         size = 1;
         onlySameOutput = true;
-        pinnedApps = [ "google-chrome.desktop" "code.desktop" ];
+        monitors = [ "eDP-1" ];
+        pinnedApps = [ "com.mitchellh.ghostty.desktop" "org.gnome.Nautilus.desktop" "google-chrome" "code" ];
         colorizeIcons = false;
       };
       controlCenter = {
