@@ -21,5 +21,6 @@
     ./../modules/home/wallpaper.nix
     ./../modules/home/lock.nix
     ./../modules/home/discord.nix
+    ./../modules/home/nautilus.nix
   ];
 }
