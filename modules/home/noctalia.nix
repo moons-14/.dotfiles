@@ -22,6 +22,11 @@
             {
               id = "WiFi";
             }
+          {
+              id = "CustomButton";
+              icon = "wifi";
+              leftClickExec = "nm-connection-editor";
+            }
             {
               id = "Bluetooth";
             }
@@ -107,11 +112,6 @@
             left = [
               {
                 id = "WiFi";
-              }
-              {
-                id = "CustomButton";
-                icon = "wifi";
-                leftClickExec = "nm-connection-editor";
               }
               {
                 id = "Bluetooth";
