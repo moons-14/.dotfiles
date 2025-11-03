@@ -33,5 +33,6 @@ in
     git # Version Control System
     tailscale # Zero-Config VPN
     unstable.msedit # Microsoft Editor
+    nil # Nix Language Server
   ];
 }
