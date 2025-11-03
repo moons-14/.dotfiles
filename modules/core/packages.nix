@@ -34,5 +34,6 @@ in
     tailscale # Zero-Config VPN
     unstable.msedit # Microsoft Editor
     nil # Nix Language Server
+    docker # Containerization Platform
   ];
 }
