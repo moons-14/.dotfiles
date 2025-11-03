@@ -17,11 +17,14 @@ in
     spawn-at-startup = [
       { command = [ "noctalia-shell" ]; }
     ];
+
+    outputs."eDP-1".scale = 1;
+    cursor.size = 16;
     
     # Doracura color
     layout = {
       focus-ring = {
-        active.color = "#bd93f9" ;
+        active.color = "#bd93f9";
         inactive.color = "#6272a4";
       };
       border = {
