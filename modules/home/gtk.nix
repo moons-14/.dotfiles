@@ -3,7 +3,7 @@
     gtk = {
       enable = true;
       theme = {
-        name = "dracula-theme";
+        name = "Dracula";
         package = pkgs.dracula-theme;
       };
       cursorTheme = {
