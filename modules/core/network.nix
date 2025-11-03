@@ -1,4 +1,4 @@
-{ host, ... }:
+{ host, pkgs, ... }:
 {
   networking = {
     hostName = "${host}";
@@ -9,6 +9,11 @@
   };
 
   services.resolved.enable = false;
+
+  environment.systemPackages = [
+    pkgs.nm-connection-editor
+  ];
+  programs.nm-applet.enable = true;
 
   services.dnscrypt-proxy2 = {
     enable = true;
