@@ -9,7 +9,7 @@ in
   programs.niri.settings = {
     input.touchpad = { 
       natural-scroll = true;
-      scroll-factor = 0.6;
+      scroll-factor = 0.3;
       scroll-method = "two-finger";
       click-method = "clickfinger";
     };
