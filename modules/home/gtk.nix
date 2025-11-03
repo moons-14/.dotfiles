@@ -3,7 +3,7 @@
     gtk = {
       enable = true;
       theme = {
-        name = "Dracula-Dark";
+        name = "dracula-theme";
         package = pkgs.dracula-theme;
       };
       cursorTheme = {
@@ -11,8 +11,8 @@
         name = "Adwaita";
       };
       iconTheme = {
-        package = pkgs.dracula-icon-theme;
-        name = "Dracula-Dark";
+        package = pkgs.papirus-icon-theme;
+        name = "Papirus-Dark";
       };
     };
 }
