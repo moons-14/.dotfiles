@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    gnome.nautilus
+    nautilus
     gvfs sushi
     gradience
     adw-gtk3
