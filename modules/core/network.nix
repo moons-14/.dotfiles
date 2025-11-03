@@ -11,7 +11,7 @@
   services.resolved.enable = false;
 
   environment.systemPackages = [
-    pkgs.nm-connection-editor
+    pkgs.networkmanagerapplet
   ];
   programs.nm-applet.enable = true;
 
