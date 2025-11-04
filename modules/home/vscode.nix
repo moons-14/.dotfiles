@@ -7,20 +7,23 @@ let
     common = {
       extensions = with vsc; [
         dracula-theme.theme-dracula
+        ms-vscode-remote.vscode-remote-extensionpack
+        dbaeumer.vscode-eslint
       ];
       userSettings = {
         "workbench.colorTheme" = "Dracula";
         "window.autoDetectColorScheme" = false;
         "editor.formatOnSave" = true;
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
       };
     };
 
     web = {
       extensions = with vsc; [
-        dbaeumer.vscode-eslint
+        biomejs.biome
       ];
       userSettings = {
-        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+        "editor.defaultFormatter" = "biomejs.biome";
       };
     };
 
