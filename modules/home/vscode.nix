@@ -15,6 +15,8 @@ let
         "window.autoDetectColorScheme" = false;
         "editor.formatOnSave" = true;
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
+        "git.enableSmartCommit" = true;
+        "files.autoSave" = "onFocusChange";
       };
     };
 
