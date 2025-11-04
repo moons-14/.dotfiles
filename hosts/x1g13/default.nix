@@ -7,7 +7,7 @@
 {
   imports =
     [
-      inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x1-9th-gen
+      inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x1-13th-gen
       ./../../modules/drivers/intel-drivers.nix
       ./hardware-configuration.nix
     ];

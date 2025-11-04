@@ -1,6 +1,11 @@
 { pkgs, inputs, ... }:
 let
-  unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
+  unstable = import inputs.nixpkgs-unstable {
+    system = pkgs.system;
+    config = {
+      allowUnfree = true;
+    };
+  };
 in
 {
   programs = {
@@ -35,5 +40,7 @@ in
     unstable.msedit # Microsoft Editor
     nil # Nix Language Server
     docker # Containerization Platform
+    unstable._1password-cli
+    unstable._1password-gui
   ];
 }

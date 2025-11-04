@@ -22,9 +22,9 @@
             {
               id = "WiFi";
             }
-          {
+            {
               id = "CustomButton";
-              icon = "wifi";
+              icon = "access-point";
               leftClickExec = "nm-connection-editor";
             }
             {
