@@ -5,10 +5,23 @@ let
 
   layers = rec {
     common = {
-      extensions = with vsc; [
+      extensions = (with vsc; [
         dracula-theme.theme-dracula
         ms-vscode-remote.vscode-remote-extensionpack
         dbaeumer.vscode-eslint
+        ms-vscode-remote.remote-containers
+        github.vscode-github-actions
+        github.vscode-pull-request-github
+        eamodio.gitlens
+        streetsidesoftware.code-spell-checker
+        ms-ceintl.vscode-language-pack-ja
+      ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        {
+          name = "hadolint";
+          publisher = "exiasr";
+          version = "1.1.2";
+          hash = "sha256-6GO1f8SP4CE8yYl87/tm60FdGHqHsJA4c2B6UKVdpgM=";
+        }
       ];
       userSettings = {
         "workbench.colorTheme" = "Dracula";
@@ -17,12 +30,37 @@ let
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
         "git.enableSmartCommit" = true;
         "files.autoSave" = "onFocusChange";
+        "git.confirmSync" = false;
       };
     };
 
     web = {
-      extensions = with vsc; [
+      extensions = (with vsc; [
         biomejs.biome
+        lokalise.i18n-ally
+        bradlc.vscode-tailwindcss
+        prisma.prisma
+        hashicorp.terraform
+        yoavbls.pretty-ts-errors
+      ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        {
+          name = "pnpm-catalog-lens";
+          publisher = "antfu";
+          version = "1.0.0";
+          hash = "sha256-mCMBVxZRIb3Jao1XSS7EQRQX3Y2vrkpAmy6ldSqZa9c=";
+        }
+        {
+          name = "explorer";
+          publisher = "vitest";
+          version = "1.32.1";
+          hash = "sha256-MAfjS/oFfFuiE+Q2w6leSlao436QSw2fKjd7/BE/Q8Y=";
+        }
+        {
+          name = "native-preview";
+          publisher = "typescriptteam";
+          version = "0.20251104.1";
+          hash = "sha256-lUSwtf7jncnrp6UXgmZU30e+CFRKqf0N41+Xna6daok=";
+        }
       ];
       userSettings = {
         "editor.defaultFormatter" = "biomejs.biome";
