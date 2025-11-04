@@ -4,6 +4,8 @@
     blueman.enable = true; # Bluetooth Support
     tumbler.enable = true; # Image/video preview
 
+    fwupd.enable = true;
+
     gnome.gnome-keyring.enable = true;
 
     upower.enable = true;
