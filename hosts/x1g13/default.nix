@@ -9,6 +9,7 @@
     [
       inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x1-13th-gen
       ./../../modules/drivers/intel-drivers.nix
+      ./../../modules/core/secure-boot.nix
       ./hardware-configuration.nix
     ];
 }

@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, ... }: {
   services = {
 
     blueman.enable = true; # Bluetooth Support
@@ -35,5 +35,14 @@
       enable = true;
       dates = "weekly";
     };
+  };
+
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-wlr
+      pkgs.xdg-desktop-portal-gtk
+    ];
   };
 }

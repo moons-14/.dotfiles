@@ -22,5 +22,6 @@
     ./../modules/home/discord.nix
     ./../modules/home/nautilus.nix
     ./../modules/home/gtk.nix
+    ./../modules/home/zoom.nix
   ];
 }

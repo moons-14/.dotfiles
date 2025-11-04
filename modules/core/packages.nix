@@ -42,5 +42,6 @@ in
     docker # Containerization Platform
     unstable._1password-cli
     unstable._1password-gui
+    sbctl
   ];
 }
