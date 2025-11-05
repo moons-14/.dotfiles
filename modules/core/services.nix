@@ -9,7 +9,13 @@
     gnome.gnome-keyring.enable = true;
 
     upower.enable = true;
-    tlp.enable = true;
+    tlp = {
+      enable = true;
+      settings = {
+        WIFI_PWR_ON_AC = "off";
+        WIFI_PWR_ON_BAT = "off";
+      };
+    };
 
     pipewire = {
       enable = true;
