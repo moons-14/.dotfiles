@@ -7,8 +7,7 @@
     nameservers = [ "127.0.0.1" "::1" ];
     networkmanager.dns = "none";
     
-    networkmanager.powersave = false;
-    wifi.backend = "iwd";
+    networkmanager.wifi.powersave = false;
   };
 
   services.resolved.enable = false;
