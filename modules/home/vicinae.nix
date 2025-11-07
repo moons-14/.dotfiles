@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs,  ... }:
 {
   imports = [
     inputs.vicinae.homeManagerModules.default
@@ -13,7 +13,7 @@
         font.size = 11;
         popToRootOnClose = false;
         rootSearch.searchFiles = false;
-        theme.name = "vicinae-dark";
+        theme.name = "Dracula";
         window = {
           csd = true;
           opacity = 0.95;

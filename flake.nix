@@ -74,9 +74,12 @@
 	};
         
         devShells = {
-           x86_64-linux = {
-               next-web = import ./shells/next-web.nix { pkgs = import nixpkgs { system = "x86_64-linux"; }; };
-           };
+            x86_64-linux = 
+            let
+                pkgs = import nixpkgs { system = "x86_64-linux"; };
+            in {
+                next-web = import ./shells/next-web.nix { inherit pkgs; };
+            };
         };
     };
 }

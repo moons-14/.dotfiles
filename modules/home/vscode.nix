@@ -109,4 +109,10 @@ in {
       web = mkProfile [ layers.common layers.web ] { };
     };
   };
+
+  xdg.configFile."Code/User/locale.json".text = ''
+  {
+    "locale": "ja"
+  }
+  '';
 }

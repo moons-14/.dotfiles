@@ -7,5 +7,6 @@
     ./ssh.nix
     ./vim
     ./zsh.nix
+    ./environment.nix
   ];
 }

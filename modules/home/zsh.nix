@@ -35,6 +35,10 @@
       setopt hist_verify
       setopt inc_append_history_time
 
+      unsetopt SHARE_HISTORY
+      setopt APPEND_HISTORY
+      setopt INC_APPEND_HISTORY_TIME
+
       # ---- from gist: aliases ----
       alias docker-compose="docker compose"
       alias clearsign='export GPG_TTY=$(tty) && openssl rand -hex 16 | gpg --clearsign'
