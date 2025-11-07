@@ -5,6 +5,12 @@
     userName = "moons-14";
     userEmail = "moons@moons14.com";
 
+    ignores = [
+      ".direnv/"
+      ".envrc"
+      "!.envrc.example"
+    ];
+
     extraConfig = {
       push.default = "simple";
       credential.helper = "cache --timeout=7200";
