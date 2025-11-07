@@ -10,6 +10,7 @@ let
         ms-vscode-remote.vscode-remote-extensionpack
         dbaeumer.vscode-eslint
         ms-vscode-remote.remote-containers
+        ms-vscode-remote.remote-ssh
         github.vscode-github-actions
         github.vscode-pull-request-github
         eamodio.gitlens
