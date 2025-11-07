@@ -50,7 +50,7 @@ in
         action.spawn = [ "nautilus" "--new-window" ];
         hotkey-overlay.title = "Open File Manager: nautilus";
       };
-      "Super+Alt+L" = {
+      "Mod+L" = {
         action.spawn = [ "noctalia-shell" "ipc" "call" "lockScreen" "lock" ];
         hotkey-overlay.title = "Lock the Screen: noctalia";
       };

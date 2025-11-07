@@ -13,7 +13,7 @@
         font.size = 11;
         popToRootOnClose = false;
         rootSearch.searchFiles = false;
-        theme.name = "Dracula";
+        theme.name = "dracula";
         window = {
           csd = true;
           opacity = 0.95;
