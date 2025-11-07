@@ -35,6 +35,7 @@ in
       shadow = {
         color = "#0007";
       };
+      center-focused-column = "never";
     };
 
     binds = defaultKeyBind // {
@@ -58,6 +59,11 @@ in
         action.spawn = [ "noctalia-shell" "ipc" "call" "lockScreen" "lock" ];
         hotkey-overlay.title = "Lock the Screen: noctalia";
       };
+      "Mod+V" = {
+        action.spawn = [ "vicinae" "vicinae://extensions/vicinae/clipboard/history" ];
+        hotkey-overlay.title = "Clipboard History";
+      };
+
       
       "XF86AudioRaiseVolume" = {
         action.spawn = [ "noctalia-shell" "ipc" "call" "volume" "increase" ];
