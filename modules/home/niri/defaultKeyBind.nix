@@ -15,11 +15,6 @@
   # shows a list of important hotkeys.
   "Mod+Shift+Slash".action.show-hotkey-overlay = {};
 
-  # Suggested binds for running programs: terminal, app launcher, screen locker.
-  "Mod+T".action.spawn = "alacritty";
-  "Mod+D".action.spawn = "fuzzel";
-  "Super+Alt+L".action.spawn = "swaylock";
-
   # You can also use a shell. Do this if you need pipes, multiple commands, etc.
   # Note: the entire command goes as a single argument in the end.
   # Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }
