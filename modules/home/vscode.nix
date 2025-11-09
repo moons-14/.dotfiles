@@ -37,6 +37,7 @@ let
         "github.copilot.nextEditSuggestions.enabled" = true;
         "editor.suggestOnTriggerCharacters" = true;
         "editor.quickSuggestions" = { other = true; comments = false; strings = true; };
+        "git.autofetch" = true;
       };
     };
 
