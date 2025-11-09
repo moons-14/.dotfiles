@@ -6,6 +6,8 @@ let
   layers = rec {
     common = {
       extensions = (with vsc; [
+        github.copilot
+        github.copilot-chat
         dracula-theme.theme-dracula
         ms-vscode-remote.vscode-remote-extensionpack
         dbaeumer.vscode-eslint
@@ -32,6 +34,9 @@ let
         "git.enableSmartCommit" = true;
         "files.autoSave" = "onFocusChange";
         "git.confirmSync" = false;
+        "github.copilot.nextEditSuggestions.enabled" = true;
+        "editor.suggestOnTriggerCharacters" = true;
+        "editor.quickSuggestions" = { other = true; comments = false; strings = true; };
       };
     };
 
@@ -65,6 +70,8 @@ let
       ];
       userSettings = {
         "editor.defaultFormatter" = "biomejs.biome";
+        "[typescript].editor.defaultFormatter" = "biomejs.biome";
+        "[typescriptreact].editor.defaultFormatter" = "biomejs.biome";
       };
     };
 

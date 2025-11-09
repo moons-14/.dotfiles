@@ -6,7 +6,7 @@
     ./../modules/core/hyprland.nix
     ./../modules/core/greetd.nix
     ./../modules/core/noctalia.nix
-    ./../modules/core/sns.nix
+    ./../modules/core/gui.nix
   ];
 
   home-manager.users.moons.imports = [
