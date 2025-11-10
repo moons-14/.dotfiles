@@ -25,6 +25,7 @@
       alsa.support32Bit = true;
       pulse.enable = true;
       jack.enable = true;
+      wireplumber.enable = true;
     };
 
     logind = {
@@ -46,6 +47,7 @@
   };
 
   programs.nix-ld.enable = true;
+  security.rtkit.enable = true;
 
   xdg.portal = {
     enable = true;
@@ -54,5 +56,10 @@
       pkgs.xdg-desktop-portal-wlr
       pkgs.xdg-desktop-portal-gtk
     ];
+    xdgOpenUsePortal = true;
+    config = {
+      common.default = [ "wlr" "gtk" ];
+      niri.default   = [ "wlr" "gtk" ];
+    };
   };
 }

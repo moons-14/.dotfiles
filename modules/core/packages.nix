@@ -43,5 +43,6 @@ in
     unstable._1password-cli
     unstable._1password-gui
     sbctl
+    xwayland-satellite slurp grim wf-recorder
   ];
 }
