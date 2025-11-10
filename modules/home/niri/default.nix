@@ -9,9 +9,12 @@ in
   programs.niri.settings = {
     input.touchpad = { 
       natural-scroll = true;
-      scroll-factor = 0.3;
+      scroll-factor = 0.5;
+      accel-speed = 0.3;
       scroll-method = "two-finger";
       click-method = "clickfinger";
+      drag = true;
+      drag-lock = true;
     };
 
     spawn-at-startup = [
