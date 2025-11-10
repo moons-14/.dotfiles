@@ -84,7 +84,9 @@ let
       userSettings = {
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = "nil";
-          "[nix].editor.defaultFormatter" = "jnoortheen.nix-ide";
+        "[nix]"={
+          "editor.defaultFormatter" = "jnoortheen.nix-ide";
+        };
       };
     };
   };
