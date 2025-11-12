@@ -126,4 +126,26 @@ in {
     "locale": "ja"
   }
   '';
+
+
+  xdg.desktopEntries."code-new-window" = {
+    name = "Visual Studio Code (New Window)";
+    genericName = "Text Editor";
+    comment = "Open a fresh VSCode window";
+    exec = "${pkgs.vscode}/bin/code -n %F";
+    settings = {
+      Keywords = "code;vscode;vs code;visual studio code;";
+    };
+    icon = "code";
+    categories = [ "Development" "IDE" ];
+    terminal = false;
+    type = "Application";
+    mimeType = [ "text/plain" ];
+    actions = {
+      NewWindow = {
+        name = "New Window";
+        exec = "${pkgs.vscode}/bin/code -n";
+      };
+    };
+  };
 }

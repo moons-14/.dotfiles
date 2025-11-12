@@ -1,4 +1,8 @@
 { pkgs, ... }:
 {
-  environment.systemPackages = with pkgs; [ slack insomnia ];
+  environment.systemPackages = with pkgs; [ 
+    slack 
+    insomnia
+    obsidian
+  ];
 }
