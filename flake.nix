@@ -79,6 +79,7 @@
                 pkgs = import nixpkgs { system = "x86_64-linux"; };
             in {
                 next-web = import ./shells/next-web.nix { inherit pkgs; };
+                jupyter = import ./shells/jupyter.nix { inherit pkgs; };
             };
         };
     };
