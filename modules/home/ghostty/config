@@ -21,3 +21,10 @@ keybind = ctrl+alt+right_bracket=next_tab
 
 # close tab
 keybind = ctrl+alt+q=close_window
+
+# font size
+keybind = ctrl+shift+semicolon=increase_font_size:1
+keybind = ctrl+shift+minus=increase_font_size:1
+
+
+shell-integration-features = ssh-terminfo,ssh-env
