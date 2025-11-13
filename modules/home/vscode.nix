@@ -89,6 +89,14 @@ let
         };
       };
     };
+
+    jupyter = {
+      extensions = with vsc; [
+        ms-toolsai.jupyter
+        ms-python.python
+      ];
+      userSettings = {};
+    };
   };
 
   combine = (ls:
@@ -118,6 +126,8 @@ in {
       nix = mkProfile [ layers.common layers.nix ] { };
 
       web = mkProfile [ layers.common layers.web ] { };
+
+      jupyter = mkProfile [ layers.common layers.jupyter ] { };
     };
   };
 
@@ -126,26 +136,4 @@ in {
     "locale": "ja"
   }
   '';
-
-
-  xdg.desktopEntries."code-new-window" = {
-    name = "Visual Studio Code (New Window)";
-    genericName = "Text Editor";
-    comment = "Open a fresh VSCode window";
-    exec = "${pkgs.vscode}/bin/code -n %F";
-    settings = {
-      Keywords = "code;vscode;vs code;visual studio code;";
-    };
-    icon = "code";
-    categories = [ "Development" "IDE" ];
-    terminal = false;
-    type = "Application";
-    mimeType = [ "text/plain" ];
-    actions = {
-      NewWindow = {
-        name = "New Window";
-        exec = "${pkgs.vscode}/bin/code -n";
-      };
-    };
-  };
 }
