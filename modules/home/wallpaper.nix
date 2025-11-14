@@ -1,10 +1,10 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 let
   walls = pkgs.fetchFromGitHub {
-    owner = "orangci";
-    repo  = "walls-catppuccin-mocha";
-    rev   = "40912e6418737e93b59a38bcf189270cbf26656d";
-    hash  = "sha256-1QR3J+wgLVNjucPSVELv0FicNt+jM2KPLU5ubBfxjHI=";
+    owner = "moons-14";
+    repo  = "wallpapers";
+    rev   = "a126b57cb271931b96f7e984728c95ffb104eda0";
+    hash  = "sha256-BATc1Gg73pBCMem/32IQ3c2avJT1DOLANtLZbLbTka0=";
   };
 in {
   home.file.".wallpapers" = {
