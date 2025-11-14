@@ -1,4 +1,4 @@
-theme = tokyonight
+theme = dracula
 background-blur-radius = 20
 background-opacity = 0.9
 font-family = BlexMono Nerd Font Mono

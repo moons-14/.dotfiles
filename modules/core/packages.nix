@@ -42,6 +42,7 @@ in
     docker # Containerization Platform
     unstable._1password-cli
     unstable._1password-gui
+    unstable.ghostty
     sbctl
     xwayland-satellite slurp grim wf-recorder
   ];

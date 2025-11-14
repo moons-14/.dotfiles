@@ -7,7 +7,6 @@
     ./../modules/core/greetd.nix
     ./../modules/core/noctalia.nix
     ./../modules/core/gui.nix
-    ./../modules/core/terminal.nix
   ];
 
   home-manager.users.moons.imports = [
