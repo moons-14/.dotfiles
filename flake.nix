@@ -74,7 +74,7 @@
             dev-1 = mkSystem {
                 host = "dev-1";
                 system = "x86_64-linux";
-                profile = "cli";
+                profile = "cli-server";
                 extraModules = [ ];
             };
 	};

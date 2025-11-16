@@ -1,0 +1,4 @@
+{ ... }:
+{
+  services.tailscale.extraSetFlags = "--ssh";
+}
