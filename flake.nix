@@ -65,12 +65,18 @@
                 profile = "cli";
                 extraModules = [ ];
             };
-	    x1g13 = mkSystem {
-		host = "x1g13";
-		system = "x86_64-linux";
-		profile = "laptop";
-		extraModules = [ ];
-	    };
+            x1g13 = mkSystem {
+                host = "x1g13";
+                system = "x86_64-linux";
+                profile = "laptop";
+                extraModules = [ ];
+            };
+            dev-1 = mkSystem {
+                host = "dev-1";
+                system = "x86_64-linux";
+                profile = "cli";
+                extraModules = [ ];
+            };
 	};
         
         devShells = {
