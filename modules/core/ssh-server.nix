@@ -1,4 +1,4 @@
 { ... }:
 {
-  services.tailscale.extraSetFlags = "--ssh";
+  services.tailscale.extraSetFlags = [ "--ssh" ];
 }
