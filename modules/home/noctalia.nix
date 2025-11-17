@@ -34,6 +34,9 @@
               id = "SystemMonitor";
             }
             {
+              id = "Taskbar";
+            }
+            {
               id = "ActiveWindow";
             }
           ];

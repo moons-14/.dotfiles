@@ -38,7 +38,6 @@ in
       shadow = {
         color = "#0007";
       };
-      center-focused-column = "never";
     };
 
     binds = defaultKeyBind // {
